@@ -1,0 +1,24 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main() {
+	int Tong[10000] = { 0 }, num, i,n, flag=0, ans=0,max=0;
+	cin >> n;
+
+	for (i = 0; i < n; i++) {
+		cin >> num;
+		Tong[num]++;
+		if (num > max) {
+			max = num;
+		}
+	}
+	for (i = 0; i <= max; i++) {
+		if (Tong[i] > flag) {
+			flag = Tong[i];
+			ans = i;
+		}
+	}
+	cout << ans;
+	return 0;
+}
